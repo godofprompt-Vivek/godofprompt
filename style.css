@@ -1,0 +1,62 @@
+/* ==========================================================================
+   GOD OF PROMPT — ARCHITECTURAL DARK-TECH STYLESHEET (style.css)
+   ========================================================================== */
+
+/* Subtle Architectural Grid Overlay */
+.bg-grid-pattern {
+    background-size: 48px 48px;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+}
+
+/* Glassmorphism Cards with Hover Elevation */
+.glass-card {
+    background: rgba(10, 34, 57, 0.45);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(25, 184, 229, 0.45);
+    box-shadow: 0 20px 40px -15px rgba(25, 184, 229, 0.12);
+}
+
+/* Infinite AI Tools Marquee Animation */
+@keyframes scrollMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-track {
+    animation: scrollMarquee 28s linear infinite;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050C16;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0F2E4A;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #19B8E5;
+}
